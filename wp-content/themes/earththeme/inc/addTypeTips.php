@@ -23,7 +23,6 @@ function add_tips_item() {
         'labels'              => $labels,
         'hierarchical'        => false,
         'supports'            => array( 'title','thumbnail', 'editor', 'revisions', 'categories'),
-        'taxonomies'          => array( 'category', 'post_tag' ),
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,

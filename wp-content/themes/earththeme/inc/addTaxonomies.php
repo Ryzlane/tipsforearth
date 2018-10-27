@@ -1,30 +1,25 @@
 <?php
-add_action('init', 'add_tips_item');
+add_action('init', 'add_taxonomies');
 
 function add_taxonomies() {
 
-	$labels = array(
-		'name'              => _x( 'Genres', 'taxonomy general name', 'textdomain' ),
-		'singular_name'     => _x( 'Genre', 'taxonomy singular name', 'textdomain' ),
-		'search_items'      => __( 'Search Genres', 'textdomain' ),
-		'all_items'         => __( 'All Genres', 'textdomain' ),
-		'parent_item'       => __( 'Parent Genre', 'textdomain' ),
-		'parent_item_colon' => __( 'Parent Genre:', 'textdomain' ),
-		'edit_item'         => __( 'Edit Genre', 'textdomain' ),
-		'update_item'       => __( 'Update Genre', 'textdomain' ),
-		'add_new_item'      => __( 'Add New Genre', 'textdomain' ),
-		'new_item_name'     => __( 'New Genre Name', 'textdomain' ),
-		'menu_name'         => __( 'Genre', 'textdomain' ),
-	);
+  $taxonomy = 'location';
+  $object_type = array('tips');
+  $taxonomy_args = array(
+    'label' => __( 'Lieux' ),
+    'rewrite' => array( 'slug' => 'tips-location' ),
+    'hierarchical' => false,
+  );
 
-	$args = array(
-		'hierarchical'      => true,
-		'labels'            => $labels,
-		'show_ui'           => true,
-		'show_admin_column' => true,
-		'query_var'         => true,
-		'rewrite'           => array( 'slug' => 'genre' ),
-	);
+  register_taxonomy($taxonomy, $object_type, $taxonomy_args);
 
-	register_taxonomy( 'genre', array( 'tips' ), $args );
+  $taxonomy = 'type';
+  $object_type = array('tips');
+  $taxonomy_args = array(
+    'label' => __( 'Types' ),
+    'rewrite' => array( 'slug' => 'tips-type' ),
+    'hierarchical' => false,
+  );
+
+  register_taxonomy($taxonomy, $object_type, $taxonomy_args);
 }
