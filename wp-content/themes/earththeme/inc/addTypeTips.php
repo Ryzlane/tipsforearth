@@ -22,12 +22,13 @@ function add_tips_item() {
     $args = array(
         'labels'              => $labels,
         'hierarchical'        => false,
-        'supports'            => array( 'title','thumbnail', 'editor', 'revisions'),
+        'supports'            => array( 'title','thumbnail', 'editor', 'revisions', 'categories'),
+        'taxonomies'          => array( 'category', 'post_tag' ),
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,
         'menu_position'       => 3,
-        'menu_icon'           => 'dashicons-admin-users',
+        'menu_icon'           => 'dashicons-admin-post',
         'show_in_nav_menus'   => true,
         'publicly_queryable'  => true,
         'exclude_from_search' => true,
@@ -38,14 +39,4 @@ function add_tips_item() {
     );
 
     register_post_type($post_type, $args );
-
-    $taxonomy = 'profil';
-    $object_type = array('member');
-    $taxonomy_args = array(
-      'label' => __( 'Profil' ),
-      'rewrite' => array( 'slug' => 'profil-member' ),
-      'hierarchical' => false,
-  );
-
-  register_taxonomy($taxonomy, $object_type, $taxonomy_args);
 }
