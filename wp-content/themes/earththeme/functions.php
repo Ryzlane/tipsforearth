@@ -1,4 +1,6 @@
 <?php
+require_once( __DIR__ . '/vendor/autoload.php' );
+
 define( 'THEME_PATH' ,          get_template_directory()            );
 define( 'TEMPLATE_PATH' ,       THEME_PATH .    '/templates'        );
 
@@ -9,6 +11,7 @@ define( 'JS_URL' ,              THEME_URL .    '/assets/scripts'      );
 define( 'FAVICONS_URL' ,        THEME_URL .    '/assets/favicon'      );
 define( 'ADMIN_IMAGES_URL' ,    IMAGES_URL .   '/admin'             );
 
+$timber = new Timber\Timber();
 
 foreach ( glob( THEME_PATH . "/inc/*.php" ) as $file ) {
     include_once $file;
