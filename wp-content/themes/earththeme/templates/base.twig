@@ -1,6 +1,6 @@
 {% block html_head_container %}
 
-{% include 'html-header.twig' %}
+{% include 'partials/html-header.twig' %}
 	{% block head %}
 	{% endblock %}
 	</head>
@@ -37,7 +37,7 @@
 
 		{% block footer %}
 			<footer id="footer">
-				{% include 'footer.twig' %}
+				{% include 'partials/footer.twig' %}
 			</footer>
 			{{ function('wp_footer') }}
 		{% endblock %}
