@@ -1,11 +1,21 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<h2>{{ foo }}</h2>
-	<p>{{ qux }}</p>
-	{% for post in posts %}
-		{% include ['partials/tease-'~post.post_type~'.twig', 'partials/tease.twig'] %}
-	{% endfor %}
+	<section class='hero-section'>
+		{% include 'partials/hero-section.twig' %}
+	</section>
+
+	<section class='last-tips'>
+		I am the last tips :
+		{% include 'partials/tease-tips.twig' with { tips: last_tips} %}
+	</section>
+
+	<section class='numbers'>
+			Today numbers :
+			{% for nbr in numbers %}
+				{% include 'partials/single-number.twig' with { number: nbr} %}
+			{% endfor %}
+	</section>
 	
-	{% include 'partials/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %}
+	{# {% include 'partials/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %} #}
 {% endblock %}
