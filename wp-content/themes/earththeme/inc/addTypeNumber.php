@@ -11,7 +11,7 @@ function add_number_item() {
         'add_new_item'       => 'Ajouter un nombres',
         'edit_item'          => "Editer un nombres",
         'new_item'           => 'Nouveau nombres',
-        'view_item'          => "Voir un nombres",
+        'view_item'          => "Voir un nombre",
         'search_items'       => 'Rechercher un nombre',
         'not_found'          => 'Pas de résultat',
         'not_found_in_trash' => 'Pas de résultat',
@@ -22,7 +22,7 @@ function add_number_item() {
     $args = array(
         'labels'              => $labels,
         'hierarchical'        => false,
-        'supports'            => array(),
+        'supports'            => array(null),
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,

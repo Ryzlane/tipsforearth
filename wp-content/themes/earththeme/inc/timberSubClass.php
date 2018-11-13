@@ -14,15 +14,7 @@ class StarterSite extends Timber\Site {
 		add_action( 'init', array( $this, 'register_taxonomies' ) );
 		parent::__construct();
 	}
-	/** This is where you can register custom post types. */
-	public function register_post_types() {
-
-	}
-	/** This is where you can register custom taxonomies. */
-	public function register_taxonomies() {
-
-	}
-
+	
 	/** This is where you add some context
 	 *
 	 * @param string $context context['this'] Being the Twig's {{ this }}.
