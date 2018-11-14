@@ -1,0 +1,10 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<section class='numbers'>
+		<h1>Taxonomies :</h1>
+		{% for el in taxonomies %}
+      {{ el.title }}
+		{% endfor %}
+	</section>
+{% endblock %}

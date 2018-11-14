@@ -6,15 +6,22 @@
 	</section>
 
 	<section class='last-tips'>
-		I am the last tips :
+		<h1>I am the last tips :</h1>
 		{% include 'partials/tease-tips.twig' with { tips: last_tips} %}
 	</section>
 
 	<section class='numbers'>
-			Today numbers :
-			{% for nbr in numbers %}
-				{% include 'partials/single-number.twig' with { number: nbr} %}
-			{% endfor %}
+		<h1>Today's numbers :</h1>
+		{% for nbr in last_numbers %}
+			{% include 'partials/single-number.twig' with { number: nbr} %}
+		{% endfor %}
+	</section>
+
+	<section class='articles'>
+		<h1>Last articles :</h1>
+		{% for article in last_articles %}
+			{% include 'partials/tease-post.twig' with { post: article} %}
+		{% endfor %}
 	</section>
 	
 	{# {% include 'partials/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %} #}

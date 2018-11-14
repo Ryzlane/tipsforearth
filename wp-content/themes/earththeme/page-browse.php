@@ -6,7 +6,7 @@ $args = array(
 );
 
 $context = Timber::get_context();
-$context['taxonomy'] = Timber::get_terms( $args );
-$templates = array( 'taxonomy.twig' );
+$context['taxonomies'] = Timber::get_terms( $args );
+$templates = array( 'browse.twig' );
 
 Timber::render( $templates, $context );
