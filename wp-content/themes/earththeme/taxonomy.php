@@ -1,12 +1,5 @@
 <?php
 
-// $args = array(
-// 	'tax_query' => array(
-// 		'taxonomy_name' => 'location',
-// 	)
-// );
-
-
 $args = array(
 	'post_type' => 'tips',
 	'tax_query' => array(
