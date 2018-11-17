@@ -1,6 +1,6 @@
 <?php
 
-$args = array(
+$args_tips = array(
 	'post_type' => 'tips',
 	'tax_query' => array(
 			array (
@@ -10,9 +10,14 @@ $args = array(
 	),
 );
 
+$args_taxonomy = array(
+	'taxonomy' => 'location',
+	'hide_empty' => false,
+);
 
 $context = Timber::get_context();
-$context['taxonomy'] = Timber::get_posts( $args );
+$context['taxonomy-tips'] = Timber::get_posts( $args_tips );
+$context['taxonomy'] = Timber::get_term(2, 'location');
 $templates = array( 'taxonomy.twig' );
 
 // echo '<pre>';
