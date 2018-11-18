@@ -16,12 +16,12 @@ $args_taxonomy = array(
 );
 
 $context = Timber::get_context();
-$context['taxonomy-tips'] = Timber::get_posts( $args_tips );
+$context['tips'] = Timber::get_posts( $args_tips );
 $context['taxonomy'] = Timber::get_term(2, 'location');
 $templates = array( 'taxonomy.twig' );
 
 // echo '<pre>';
-// print_r($context['taxonomy']);
+// print_r();
 // echo '</pre>';
 
 Timber::render( $templates, $context );

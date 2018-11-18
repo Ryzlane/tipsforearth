@@ -1,29 +1,21 @@
 {% block html_head_container %}
-
-{% include 'partials/html-header.twig' %}
-	{% block head %}
-	{% endblock %}
-	</head>
+	{% include 'partials/html-header.twig' %}
 {% endblock %}
 
 	<body class="{{body_class}}" data-template="base.twig">
-		{% block menu %}
-			<menu class="menu" >
-				{% include 'partials/menu.twig' %}
-			</menu>
-		{% endblock %}
+		<menu class="menu" >
+			{% include 'partials/menu.twig' %}
+		</menu>
 
-		<section id="content" role="main" class="content-wrapper">
+		<section id="content" role="main" class="standard-section">
 				{% block content %}
 					Sorry, no content
 				{% endblock %}
 		</section>
 
-		{% block footer %}
-			<footer id="footer">
-				{% include 'partials/footer.twig' %}
-			</footer>
-			{{ function('wp_footer') }}
-		{% endblock %}
+		<footer id="footer">
+			{% include 'partials/footer.twig' %}
+		</footer>
+		{{ function('wp_footer') }}
 	</body>
 </html>

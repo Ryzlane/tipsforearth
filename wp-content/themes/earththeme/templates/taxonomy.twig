@@ -1,7 +1,26 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<section>
-		<h1>Les tips dans la catégorie {{ taxonomy.name }}</h1>
-	</section>
+		<h1 class='standard-h1'>Les tips dans la catégorie {{ taxonomy.name }}</h1>
+
+		{% for singleTips in tips %}
+			<div class="tips__card tips__card--tease">
+				<div class="tips__card__img">
+				</div>
+				<div class='tips__card__text-container'>
+					<p class='tips__card__tags standard-p'>Maison, Eau</p>
+					<h3 class="standard-h3">
+						{{ singleTips.title }}
+					</h3>
+					<p class="tips__card__accroche standard-p">
+						{{ singleTips.accroche }}
+					</p>
+
+					<div class='tips__card__button'>
+						<input type="button" name="i-do-it">
+						<label for="i-do-it" >Je fais déjà !</label>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
 {% endblock %}
