@@ -1,1 +1,28 @@
-<div>{{ tips.title }}</div>
+	{% extends "partials/tease.twig" %}
+
+{% block content %}
+  <div class="tips__card tips__card--tease">
+    <div class="tips__card__img">
+
+    {% if post.thumbnail.src %}
+      <img src="{{tips.thumbnail.src}}" alt="{{tips.thumbnail.alt}}">
+    {% else %}
+      <img src="{{ site.theme.link }}/images/tips-placeholder.png" alt="no image for this tips">
+    {% endif %}
+    </div>
+    <div class='tips__card__text-container'>
+      <p class='tips__card__tags standard-p'>Maison, Eau</p>
+      <h3 class="standard-h3">
+        {{ tips.title }}
+      </h3>
+      <p class="tips__card__accroche standard-p">
+        {{ tips.accroche }}
+      </p>
+
+      <div class='tips__card__button'>
+        <input type="button" name="i-do-it">
+        <label for="i-do-it" >Je fais déjà !</label>
+      </div>
+    </div>
+  </div>
+{% endblock %}

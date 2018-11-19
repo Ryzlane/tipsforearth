@@ -22,7 +22,7 @@ function add_tips_item() {
     $args = array(
         'labels'              => $labels,
         'hierarchical'        => false,
-        'supports'            => array( 'title', 'thumbnail', 'revisions', 'categories'),
+        'supports'            => array( 'title', 'thumbnail', 'revisions', 'categories', 'comments'),
         'public'              => true,
         'show_ui'             => true,
         'show_in_menu'        => true,
@@ -36,6 +36,15 @@ function add_tips_item() {
         'can_export'          => true,
         'rewrite'             => array( 'slug' => $post_type )
     );
+
+    function default_comments_on( $data ) {
+        if( $data['post_type'] == 'tips' ) {
+            $data['comment_status'] = 'open';
+        }
+    
+        return $data;
+    }
+    add_filter( 'wp_insert_post_data', 'default_comments_on' );
 
     register_post_type($post_type, $args );
 }

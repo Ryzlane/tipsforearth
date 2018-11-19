@@ -3,5 +3,25 @@
 {% block content %}
 	<div class="content-wrapper">
     	Single tips page
+
+			<!-- comment box -->
+			<section class="comment-box">
+				<!-- comments -->
+				<div class="comments">
+				  {% if tips.comments %}
+					<h3> comments </h3>
+					{% for cmt in tips.comments %}
+					    {% include "comment.twig" with {comment:cmt} %}
+					{% endfor %}
+				    {% endif %}
+				</div>
+
+				{% if tips.comment_status == "closed" %}
+					<p> comments for this tips are closed </p>
+				{% else %}
+				    <!-- comment form -->
+				    {% include "comment-form.twig" %}
+				{% endif %}
+			</section>
 	</div>
 {% endblock %}

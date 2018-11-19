@@ -1,8 +1,3 @@
-/*
- * Theme Name: Earth theme
- * Description: Earth Theme made with Timber
- * Author: The earth team
-*/
 
 body {
   font-family: 'Lato', sans-serif;
@@ -48,12 +43,18 @@ body {
 }
 
 .tips__card__img {
-  min-width: 200px;
-  min-height: 20px;
+  display: flex;
+  max-width: 200px;
   border-radius: 8px 0 0 8px;
   overflow: hidden;
-  background: grey;
+  background-image: linear-gradient(to right, rgb(0, 205, 172), rgb(141, 218, 213));
 }
+
+.tips__card__img > img {
+  align-self: center;
+  width: 200px;
+}
+
 
 .tips__card__text-container {
   margin: 36px; 
