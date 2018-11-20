@@ -1,0 +1,15 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<div class="content-wrapper">
+    <section class='featured-post'>
+		  {% include 'partials/tease-featured-post.twig' with { post: featured_post} %}
+	  </section>
+
+		{# <section class='all-posts'>
+		{% for post in all_posts %}
+			{% include 'partials/tease-post.twig' with { post: post} %}
+		{% endfor %}
+		</section> #}
+	</div><!-- /content-wrapper -->
+{% endblock %}
