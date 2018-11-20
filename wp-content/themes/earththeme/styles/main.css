@@ -45,6 +45,7 @@ body {
 .tips__card__img {
   display: flex;
   max-width: 200px;
+  min-height: 200px;
   border-radius: 8px 0 0 8px;
   overflow: hidden;
   background-image: linear-gradient(to right, rgb(0, 205, 172), rgb(141, 218, 213));
@@ -57,13 +58,16 @@ body {
 
 
 .tips__card__text-container {
-  margin: 36px; 
+  position: relative;
+  min-height: 200px;
+  width: 100%;
+  padding: 24px; 
 }
 
 .tips__card__tags {
   position: absolute;
   top: 24px;
-  right: 36px;
+  right: 24px;
 }
 
 .tips__card__accroche {
@@ -76,12 +80,34 @@ body {
   display: flex;
   width: 110px;
   justify-content: space-between;
+  color: #4A4A4A;
 }
 
 .tips__card__button > input {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  border: #1A1A1A 1px solid;
+  border: #4A4A4A 1px solid;
   cursor: pointer;
+}
+
+.tips__card__stats {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  color: #4A4A4A;
+}
+
+.tips__card__stats__block {
+  display: flex;
+  align-items: center;
+}
+
+.tips__card__stats__block img {
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
 }

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52 (66869) - http://www.bohemiancoding.com/sketch -->
+    <title>done</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Tips" transform="translate(-1093.000000, -442.000000)" fill="#4A4A4A">
+            <g id="card" transform="translate(176.000000, 241.000000)">
+                <g id="footer-card" transform="translate(286.000000, 200.000000)">
+                    <g id="react" transform="translate(631.000000, 0.000000)">
+                        <g id="Group-4">
+                            <g id="done" transform="translate(0.000000, 1.000000)">
+                                <path d="M9.275,15.225 C9.375,15.325 9.5,15.375 9.625,15.375 C9.75,15.375 9.875,15.325 9.975,15.225 L16.6,8.6 C16.8,8.4 16.8,8.1 16.6,7.9 C16.4,7.7 16.1,7.7 15.9,7.9 L9.625,14.175 L6.6,11.15 C6.4,10.95 6.1,10.95 5.9,11.15 C5.7,11.35 5.7,11.65 5.9,11.85 L9.275,15.225 Z" id="Path"></path>
+                                <path d="M11,22 C17.075,22 22,17.075 22,11 C22,4.925 17.075,0 11,0 C4.925,0 0,4.925 0,11 C0,17.075 4.925,22 11,22 Z M11,1 C16.525,1 21,5.475 21,11 C21,16.525 16.525,21 11,21 C5.475,21 1,16.525 1,11 C1,5.475 5.475,1 11,1 Z" id="Shape" fill-rule="nonzero"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

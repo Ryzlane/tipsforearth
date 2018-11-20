@@ -2,14 +2,15 @@
 
 {% block content %}
   <div class="tips__card tips__card--tease">
-    <div class="tips__card__img">
-
-    {% if post.thumbnail.src %}
-      <img src="{{tips.thumbnail.src}}" alt="{{tips.thumbnail.alt}}">
-    {% else %}
-      <img src="{{ site.theme.link }}/images/tips-placeholder.png" alt="no image for this tips">
-    {% endif %}
-    </div>
+    <a class="tips__card__img-link" href="{{ tips.link }}">
+      <div class="tips__card__img">
+          {% if tips.thumbnail.src %}
+            <img src="{{tips.thumbnail.src}}" alt="{{tips.thumbnail.alt}}">
+          {% else %}
+            <img src="{{ site.theme.link }}/assets/images/tips-placeholder.png" alt="no image for this tips">
+          {% endif %}
+      </div>
+    </a>
     <div class='tips__card__text-container'>
       <p class='tips__card__tags standard-p'>Maison, Eau</p>
       <h3 class="standard-h3">
@@ -20,8 +21,18 @@
       </p>
 
       <div class='tips__card__button'>
-        <input type="button" name="i-do-it">
-        <label for="i-do-it" >Je fais déjà !</label>
+        <input type="button" name="check-tips">
+        <label for="check-tips" >Je fais déjà !</label>
+      </div>
+      <div class='tips__card__stats'>
+        <div class='tips__card__stats__block'>
+          <img src="{{ site.theme.link }}/assets/icons/check.svg" alt="check icon">
+          <p>100</p>
+        </div>
+        <div class='tips__card__stats__block'>
+          <img src="{{ site.theme.link }}/assets/icons/comment.svg" alt="comment icon">
+          <p>{{ tips.comment_count }}</p>
+        </div>
       </div>
     </div>
   </div>
