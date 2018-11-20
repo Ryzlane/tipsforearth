@@ -3,3 +3,8 @@
  * Description: Earth Theme made with Timber
  * Author: The earth team
 */
+
+@import 'styles/reset.css';
+@import 'styles/generic.css';
+@import 'styles/post.css';
+@import 'styles/tips.css';
