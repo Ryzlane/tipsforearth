@@ -16,8 +16,8 @@
 		{% endfor %}
 	</section>
 
-	<section class='articles'>
-		<h1>Last articles :</h1>
+	<h1 class='standard-h1'>Nos derniers articles</h1>
+	<section class='section-posts'>
 		{% for article in last_articles %}
 			{% include 'partials/tease-post.twig' with { post: article} %}
 		{% endfor %}

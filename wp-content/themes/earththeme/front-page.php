@@ -15,7 +15,7 @@ $args_last_numbers = array(
 
 $args_last_articles = array(
 	'post_type' => 'post',
-	'numberposts' => 3,
+	'numberposts' => 4,
 	'orderby' => 'post_date',
 	'order' => 'DESC',
 );
