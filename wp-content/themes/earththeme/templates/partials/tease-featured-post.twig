@@ -1,11 +1,19 @@
-{% extends "partials/tease.twig" %}
+{% extends 'partials/tease.twig' %}
 
 {% block content %}
-  <div class="tease-featured-post">
-	  <h1 class="standard-h1"><a href="{{post.link}}">{{post.title}}</a></h1>
-		{% if post.thumbnail.src %}
-			<img src="{{post.thumbnail.src}}" />
-		{% endif %}
-		<p>{{post.preview.length(25)}}</p>
+  <div class='tease-featured-post'>
+	  <h1 class='standard-h1'><a href='{{post.link}}'>{{post.title}}</a></h1>
+	  <p class='tease-featured-post__infos standard-p-secondary'>{{ post.date('d/m/Y') }} | {{ post.comment_count }} commentaires</p>
+		<div class='tease-featured-post__img'>
+			{% if post.thumbnail.src %}
+				<img src='{{post.thumbnail.src}}' />
+			{% endif %}
+		</div>
+		<p class='tease-featured-post__preview standard-p'>{{post.preview.length(50)}}</p>
+		<a class='tease-featured-post__link' href='{{post.link}}'>
+			<div></div>
+			<p class='standard-p'>Lire l'article</p>
+			<div></div>
+		</a>
   </div>
 {% endblock %}

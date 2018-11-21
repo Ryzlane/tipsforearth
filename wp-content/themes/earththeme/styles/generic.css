@@ -18,3 +18,14 @@ body {
 .standard-p {
   font-size: 16px;
 }
+
+.standard-p-secondary {
+  font-size: 16px;
+  color: #4A4A4A;
+}
+
+.read-more {
+  font-style: italic;
+  font-size: 16px;
+  color: #4A4A4A;
+}

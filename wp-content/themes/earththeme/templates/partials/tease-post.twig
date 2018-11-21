@@ -1,9 +1,14 @@
-{% extends "partials/tease.twig" %}
+{% extends 'partials/tease.twig' %}
 
 {% block content %}
-	<h2 class="h2"><a href="{{post.link}}">{{post.title}}</a></h2>
-		<p>{{post.preview.length(25)}}</p>
-		{% if post.thumbnail.src %}
-			<img src="{{post.thumbnail.src}}" />
-		{% endif %}
+	<div class='tease-post'>
+		<div class='tease-post__img'>
+			{% if post.thumbnail.src %}
+				<img src='{{post.thumbnail.src}}' />
+			{% endif %}
+		</div>
+		<p class='tease-post__temrs'>terms</p>
+		<h3 class='tease-post__title standard-h3'><a href='{{post.link}}'>{{post.title}}</a></h3>
+			<p>{{post.preview.length(50)}}</p>
+	</div>
 {% endblock %}

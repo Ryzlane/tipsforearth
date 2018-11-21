@@ -1,0 +1,83 @@
+/*************************
+
+    TEASE FEATURES POST
+
+*************************/
+
+.tease-featured-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.tease-featured-post__infos {
+  margin: 24px 0;
+}
+
+.tease-featured-post__img {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.tease-featured-post__img > img {
+  width: 100%;
+}
+
+.tease-featured-post__preview {
+  margin: 24px;
+  width: 90%;
+  line-height: 150%;
+}
+
+.tease-featured-post__link {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 48px;
+  color: #08CEAE;
+  font-weight: bold;
+}
+
+.tease-featured-post__link > div {
+  background: #4A4A4A;
+  width: 40%;
+  height: 1px;
+}
+
+/*************************
+
+        TEASE POST
+
+*************************/
+
+.section-posts {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 48px 0;
+}
+
+.tease-post {
+  max-width: 48%;
+  min-height: 600px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #4A4A4A;
+  border-radius: 8px 8px 0 0;
+}
+
+.tease-post__img {
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.tease-post__img > img {
+  width: 100%;
+}

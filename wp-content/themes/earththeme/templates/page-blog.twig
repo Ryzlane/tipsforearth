@@ -6,10 +6,12 @@
 		  {% include 'partials/tease-featured-post.twig' with { post: featured_post} %}
 	  </section>
 
-		{# <section class='all-posts'>
+		<h1 class='standard-h1'>Nos articles plus anciens</h1>
+
+		<section class='section-posts'>
 		{% for post in all_posts %}
 			{% include 'partials/tease-post.twig' with { post: post} %}
 		{% endfor %}
-		</section> #}
-	</div><!-- /content-wrapper -->
+		</section>
+	</div>
 {% endblock %}
