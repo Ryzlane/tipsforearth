@@ -2,7 +2,6 @@
   <nav id="nav-main" class="nav-main" role="navigation">
   {% if menu %}
     <ul>
-      {{ site.title }}
       {% for item in menu.get_items %}
         <li class="{{ item.classes | join(' ') }}">
           <a target="{{ item.target }}" href="{{ item.link }}">{{ item.title }}</a>

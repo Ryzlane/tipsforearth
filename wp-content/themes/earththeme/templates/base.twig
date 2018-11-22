@@ -1,7 +1,9 @@
 {% block html_head_container %}
 	{% include 'partials/html-header.twig' %}
 {% endblock %}
-
+	<pre>
+		{{ dump(site) }}
+	</pre>
 	<body class="{{body_class}}" data-template="base.twig">
 		<menu class="menu" >
 			{% include 'partials/menu.twig' %}
