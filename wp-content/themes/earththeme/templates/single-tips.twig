@@ -1,19 +1,37 @@
 {% extends "base.twig" %}
 
 {% block content %}
-	<div class="content-wrapper">
-    	Single tips page
-			<!-- comment box -->
-			<section class="comment-box">
-				<!-- comments -->
-				<div class="comments">
-				  {% if tips.comments %}
+	<div class="singleTips">
+		<h1 class='standard-h1'>{{tips.title}}</h1>
+
+		<section class='single-tips'>
+		{% include 'partials/tease-tips.twig' with { tips: single_tips} %}
+	    </section>
+
+		<section class='numbers'>
+			<h3 class='standard-h3'>En quelques chiffres :</h3>
+			{% for nbr in last_numbers %}
+			{% include 'partials/single-number.twig' with { number: nbr} %}
+			{% endfor %}
+		</section>
+
+		<section class="participation">
+			<h1 class='standard-h1'>102 personnes ont déjà réalisé ce tip ! Et vous ?</h1>
+			<button href="#" class="participationBtn">Je l'ai fait !</button>
+		</section>
+
+		<!-- comment box -->
+		<section class="comment-box">
+		
+		<!-- comments -->
+			<div class="comments">
+				{% if tips.comments %}
 					<h3> comments </h3>
-					{% for cmt in tips.comments %}
-					    {% include "comment.twig" with { comment: cmt } %}
-					{% endfor %}
-				    {% endif %}
-				</div>
+				{% for cmt in tips.comments %}
+					{% include "comment.twig" with { comment: cmt } %}
+				{% endfor %}
+				{% endif %}
+			</div>
 
 				{% if tips.comment_status == "closed" %}
 					<p> comments for this tips are closed </p>
@@ -21,6 +39,6 @@
 				    <!-- comment form -->
 				    {% include "comment-form.twig" with { post: tips } %}
 				{% endif %}
-			</section>
+		</section>
 	</div>
 {% endblock %}
