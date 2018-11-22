@@ -87,3 +87,26 @@
   height: 18px;
   margin-right: 4px;
 }
+
+.numbers
+{
+  margin-top: 50px;
+}
+
+.participation
+{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.participationBtn
+{
+  margin-top: 50px;
+  width: 180px;
+  height: 50px;
+  background: linear-gradient(to right, #00CDAC, #8DDAD5);
+  border-radius: 25px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
