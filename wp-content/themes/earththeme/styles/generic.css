@@ -29,3 +29,20 @@ body {
   font-size: 16px;
   color: #4A4A4A;
 }
+
+.standard-button
+{
+  background-color: #002878;
+  background-image: linear-gradient(45deg, #00CDAC 0%, #8DDAD5 90%);
+  background-position: 100% 0;
+  color: white;
+  border-radius: 50px;
+  padding: 12px 48px;
+}
+
+.standard-button_position
+{
+  display: inline-block;
+  margin: 10% auto;
+  transform: translateX(50%);
+}
