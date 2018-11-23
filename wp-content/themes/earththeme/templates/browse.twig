@@ -4,11 +4,14 @@
 	<section class='numbers'>
 		<h1 class='standard-h1'>Les différentes catégories :</h1>
 		{% for el in taxonomies %}
-		<div class='section-posts tease-post '>
-      <h3 class='standard-h3'> {{ el.title }} </h3>
-	  {% include 'partials/tease-post.twig' with { post: post} %}
-
-	  </div>
+		<div class='tease-post '>
+			<div class='tease-post__img'> {{ el.salon }}  </div>
+      			<h3 class='standard-h3'> {{ el.title }} </h3>
+	  			<p class="tease-post__preview"> {{ el.description }} </p>
+			<div class="standard-button_position">	
+				<a href="#" class='standard-button'>Voir plus</a>
+			</div>
+	  	</div>
 		{% endfor %}
 	</section>
 {% endblock %}
