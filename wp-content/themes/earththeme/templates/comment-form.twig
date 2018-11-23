@@ -1,5 +1,5 @@
 <div class="comment-form">
-    <h3 class='standard-h3'>Add comment</h3>
+    <h3 class='standard-h3'>Poster un commentaire</h3>
     <form class="comment-form" method="post" action="{{ site.site_url~'/wp-comments-post.php' }}">
         {% if  user %}
             <input type="hidden" name="email" value="{{ user.email }}">
@@ -16,7 +16,7 @@
                 <input name="url" type="url">
             </label>
         {% endif %}
-        <label>Comment<br>
+        <label>Commentaire<br>
             <textarea placeholder="Leave a comment..." name="comment" cols="60" rows="3"></textarea>
         </label>
         <input name="comment_post_ID" value="{{ post.id }}" type="hidden">

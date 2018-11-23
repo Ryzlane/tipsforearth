@@ -1,0 +1,45 @@
+.footer
+{
+    margin-top: 80px;
+    background-color: #08CEAE;
+    height: 250px;
+    color: white;
+}
+
+.footerTitle
+{
+    font-size: 18px;
+    font-weight: 800;
+    /* padding-top: 40px; */
+}
+
+.containerFooter
+{
+    width: 75%;
+    margin: 0 auto;
+}
+
+.containerFooterInfos
+{
+    width: 350px;
+    line-height: 20px;
+    display: inline-block;
+}
+
+.footerInfos
+{
+    width: 300px;
+    padding-top: 20px;
+}
+
+.containerFooterContact
+{ 
+    width: 360px;
+    /* float: left; */
+    display: inline-block;
+}
+
+.containerFooterSocial
+{
+    display: inline-block;
+}   

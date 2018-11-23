@@ -5,7 +5,23 @@
 		<h1 class='standard-h1'>{{tips.title}}</h1>
 
 		<section class='single-tips'>
-		{% include 'partials/tease-tips.twig' with { tips: single_tips} %}
+		<div class='tips__card tips__card'>
+			<a class='tips__card__img-link' href='{{ tips.link }}'>
+			<div class='tips__card__img'>
+				{% if tips.thumbnail.src %}
+					<img src='{{tips.thumbnail.src}}' alt='{{tips.thumbnail.alt}}'>
+				{% else %}
+					<img src='{{ site.theme.link }}/assets/images/tips-placeholder.png' alt='no image for this tips'>
+				{% endif %}
+			</div>
+			</a>
+			<div class='tips__card__text-container'>
+			<p class='standard-p'><a href="{{ tips.link }}">{{ tips.description }}</a></h3>
+			<p class='tips__card__accroche standard-p'>
+			</p>
+			</div>
+		</div>
+
 	    </section>
 
 		<section class='numbers'>
@@ -20,25 +36,20 @@
 			<button href="#" class="participationBtn">Je l'ai fait !</button>
 		</section>
 
-		<!-- comment box -->
+		<!-- comment box --> 
 		<section class="comment-box">
 		
 		<!-- comments -->
 			<div class="comments">
 				{% if tips.comments %}
-					<h3> comments </h3>
+				<h3 class='standard-h3'>2 commentaires </h3>
 				{% for cmt in tips.comments %}
 					{% include "comment.twig" with { comment: cmt } %}
 				{% endfor %}
 				{% endif %}
 			</div>
-
-				{% if tips.comment_status == "closed" %}
-					<p> comments for this tips are closed </p>
-				{% else %}
-				    <!-- comment form -->
-				    {% include "comment-form.twig" with { post: tips } %}
-				{% endif %}
+	{% include "comment-form.twig" %}
+				
 		</section>
 	</div>
 {% endblock %}

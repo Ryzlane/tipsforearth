@@ -1,11 +1,15 @@
 <div class="blog-comment {{ comment.comment_type }}" id="blog-comment-{{ comment.ID }}">
-	<h5 class="comment-author">{{ comment.author.name }} says</h5>
-	<div class="comment-content">{{ comment.comment_content|wpautop }}</div>
+	<div class="comment-infos">
+		<img class="comment-separator" src='{{ site.theme.link }}/assets/images/separator.svg' />
+		<h5 class="comment-author">{{ comment.author.name }}</h5>
+		<div class="comment-date">{{ comment.date }}</div>
+		<div class="comment-content">{{ comment.comment_content|wpautop }}</div>
+	</div>
 
 	<section class="comment-box">
 		<!-- child comments -->
 		{% if post.comments %}
-			<h4> replies </h4>
+			<h4>Réponses</h4>
 			<div class="comments">
 				{% for cmt in comment.children %}
 					{% include "comment.twig" with { comment: cmt } %}
@@ -14,6 +18,6 @@
 		{% endif %}
 
 		<!-- comment form -->
-		{% include "comment-form.twig" %}
+		{# {% include "comment-form.twig" %} #}
 	</section>
-</div>
+</div> 
