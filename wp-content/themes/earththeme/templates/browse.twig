@@ -2,9 +2,13 @@
 
 {% block content %}
 	<section class='numbers'>
-		<h1>Les différentes catégories :</h1>
+		<h1 class='standard-h1'>Les différentes catégories :</h1>
 		{% for el in taxonomies %}
-      {{ el.title }}
+		<div class='section-posts tease-post '>
+      <h3 class='standard-h3'> {{ el.title }} </h3>
+	  {% include 'partials/tease-post.twig' with { post: post} %}
+	  {{ el.description }}
+	  </div>
 		{% endfor %}
 	</section>
 {% endblock %}
