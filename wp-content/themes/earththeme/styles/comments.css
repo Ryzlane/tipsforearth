@@ -21,7 +21,7 @@
     font-size: 14px;
     color: #9F9F9F;
     margin-top: 7px;
-}
+} 
 
 .comment-content
 {
@@ -31,6 +31,29 @@
 
 .comment-form
 {
+    margin-top: 30px;
+}
+
+.comment-field
+{
     background-color: #EEE;
-    margin-top: 50px;
+    margin-top: 30px;
+    height: 200px;
+    padding: 15px;
+}
+
+.comment-btn
+{
+    margin-top: 10px;
+    margin-right: 5px;
+    height: 50px;
+    width: 100px;
+    background-color: #EEE;
+    cursor: pointer;
+}
+
+.comment-btn:hover
+{
+    background-color: #CCC;
+    transition: ease-in-out;
 }

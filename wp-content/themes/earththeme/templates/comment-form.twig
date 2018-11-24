@@ -1,6 +1,6 @@
 <div class="comment-form">
     <h3 class='standard-h3'>Poster un commentaire</h3>
-    <form class="comment-form" method="post" action="{{ site.site_url~'/wp-comments-post.php' }}">
+    <form class="comment-form-labels" method="post" action="{{ site.site_url~'/wp-comments-post.php' }}">
         {% if  user %}
             <input type="hidden" name="email" value="{{ user.email }}">
             <input type="hidden" name="author" value="{{ user.name }}">
@@ -16,13 +16,15 @@
                 <input name="url" type="url">
             </label>
         {% endif %}
-        <label>Commentaire<br>
-            <textarea placeholder="Leave a comment..." name="comment" cols="60" rows="3"></textarea>
-        </label>
+        <div class="comment-field">
+            <label>
+                <textarea placeholder="Laisser un commentaire..." name="comment" cols="60" rows="3" style="resize: none;"></textarea>
+            </label>
+        </div>
         <input name="comment_post_ID" value="{{ post.id }}" type="hidden">
         <input name="comment_parent"  value="{{ comment.ID|default('0') }}" type="hidden">
-        <button type="submit" name="Submit" class="btn">Send</button>
-        <button type="reset">Cancel</button>
-        <p>Your comment will be revised by the site if needed.</p>
+        <button type="submit" name="Submit" class="comment-btn">Envoyer</button>
+        <button type="reset" class="comment-btn">Effacer</button>
+        <p style="margin-top:10px; font-size: 14px">Votre commentaire sera modéré par le site si besoin.</p>
     </form>
 </div>

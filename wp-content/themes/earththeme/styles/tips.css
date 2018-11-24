@@ -22,7 +22,7 @@
 .tips__card__img {
   display: flex;
   max-width: 200px;
-  min-height: 200px;
+  max-height: 200px;
   border-radius: 8px 0 0 8px;
   overflow: hidden;
   background-image: linear-gradient(to right, rgb(0, 205, 172), rgb(141, 218, 213));
@@ -99,7 +99,7 @@
   text-align: center;
 }
 
-.participationBtn
+.participation-btn
 {
   margin-top: 50px;
   width: 180px;
@@ -109,4 +109,9 @@
   color: white;
   font-size: 20px;
   cursor: pointer;
+}
+
+.tips-description
+{
+  line-height: 23px;
 }
