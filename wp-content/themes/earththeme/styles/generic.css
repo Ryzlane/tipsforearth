@@ -40,9 +40,3 @@ body {
   padding: 12px 48px;
 }
 
-.standard-button_position
-{
-  display: inline-block;
-  margin: 10% auto;
-  transform: translateX(50%);
-}
