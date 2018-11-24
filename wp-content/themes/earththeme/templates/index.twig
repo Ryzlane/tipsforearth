@@ -1,6 +1,14 @@
 {% extends "base.twig" %}
 
+{% block header %}
+
+<section class="main-header">
+	<img src='{{ site.theme.link }}/assets/images/headerbg.jpg' alt='main image'>
+</section>
+{% endblock %}
+
 {% block content %}
+
 	<section class='hero-section'>
 		{% include 'partials/hero-section.twig' %}
 	</section>
@@ -9,7 +17,7 @@
 		{% include 'partials/tease-tips.twig' with { tips: last_tips} %}
 	</section>
 
-	<section class='numbers'>
+	<section class='numbers-home'>
 		<h3 class='standard-h3'>Les chiffres de 2018 :</h3>
 		{% for nbr in last_numbers %}
 			{% include 'partials/single-number.twig' with { number: nbr} %}
@@ -25,3 +33,4 @@
 	
 	{# {% include 'partials/pagination.twig' with { pagination: posts.pagination({show_all: false, mid_size: 3, end_size: 2}) } %} #}
 {% endblock %}
+ 

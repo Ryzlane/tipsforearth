@@ -6,6 +6,11 @@
 			{% include 'partials/header.twig' %}
 		</menu>
 
+		<section id="header" role="home" class="home-section">
+			{% block header %}
+			{% endblock %}
+		</section>
+
 		<section id="content" role="main" class="standard-section">
 				{% block content %}
 					Sorry, no content
