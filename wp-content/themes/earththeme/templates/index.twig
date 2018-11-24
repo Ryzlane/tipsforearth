@@ -10,10 +10,12 @@
 	</section>
 
 	<section class='numbers'>
-		<h3 class='standard-h3'>Les chiffres de 2018 :</h3>
+		<h3 class='TitreNombre'>Quelques Chiffres </h3>
+		<section class="numbersSection">
 		{% for nbr in last_numbers %}
 			{% include 'partials/single-number.twig' with { number: nbr} %}
 		{% endfor %}
+		</section>
 	</section>
 
 	<h1 class='standard-h1'>Nos derniers articles</h1>

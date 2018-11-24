@@ -1,0 +1,87 @@
+/*
+ * Theme Name: Earth theme
+ * Description: Earth Theme made with Timber
+ * Author: The earth team
+*/
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #1A1A1A;
+}
+
+.standard-section {
+  margin: 66px 176px 0 176px;
+}
+
+.standard-h1 {
+  font-size: 36px;
+}
+
+.standard-h3 {
+  font-size: 24px;
+}
+
+.standard-p {
+  font-size: 16px;
+}
+
+
+/********************
+
+      TIPS CARD
+
+********************/
+
+.tips__card {
+  position: relative;
+  display: flex;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 42px;
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.25);
+}
+
+.tips__card--tease {
+  min-height: 200px;
+}
+
+.tips__card__img {
+  min-width: 200px;
+  min-height: 20px;
+  border-radius: 8px 0 0 8px;
+  overflow: hidden;
+  background: grey;
+}
+
+.tips__card__text-container {
+  margin: 36px; 
+}
+
+.tips__card__tags {
+  position: absolute;
+  top: 24px;
+  right: 36px;
+}
+
+.tips__card__accroche {
+  margin-top: 24px;
+}
+
+.tips__card__button {
+  position: absolute;
+  bottom: 24px;
+  display: flex;
+  width: 110px;
+  justify-content: space-between;
+}
+
+.tips__card__button > input {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: #1A1A1A 1px solid;
+  cursor: pointer;
+}
+
