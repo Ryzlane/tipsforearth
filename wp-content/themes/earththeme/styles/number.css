@@ -4,14 +4,6 @@
 
 ********************/
 
-.numbers
-{
-  background-color: #00CDAC;
-  padding: 0;
-  bottom: 0;
-
-}
-
 .numbersSection
 {
   display: flex;

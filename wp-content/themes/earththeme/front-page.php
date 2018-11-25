@@ -25,11 +25,6 @@ $context['last_tips'] = Timber::query_post( $args_last_tips );
 $context['last_numbers'] = Timber::get_posts( $args_last_numbers );
 $context['last_articles'] = Timber::get_posts( $args_last_articles );
 
-// echo '<pre>';
-// print_r($test);
-// echo '</pre>';
-
-
 
 $templates = array( 'index.twig' );
 if ( is_home() ) {
