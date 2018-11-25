@@ -3,16 +3,34 @@
 {% block content %}
 	<div class="content-wrapper">
 		<article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
-			<img src="{{ post.thumbnail.src|resize(1200, 300) }}">
+			<img src="{{ post.thumbnail.src|resize(1082, 480) }}">
 			<section class="article-content">
-				<h1 class="article-h1">{{ post.title }}</h1>
-				<a href="{{ post.link }}">{{ _e('edit') }}</a>
+				<h1 class="standard-h1">{{ post.title }}</h1>
+				{# <a href="{{ post.link }}">{{ _e('edit') }}</a> #}
 				<p class="blog-author">
-					<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&bull;</span> {{ post.date }}
+					<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&#124;</span> {{ post.date }}
 				</p>
 				<div class="article-body">
 					{{post.content}}
 				</div>
+			</section>
+
+			<section class="share">
+				<img class="share-separator" src='{{ site.theme.link }}/assets/images/separator.svg' />
+				<div class="social">
+					<img class="facebook" id="single-social" src='{{ site.theme.link }}/assets/icons/facebook.svg' />
+					<img class="twitter" id="single-social" src='{{ site.theme.link }}/assets/icons/twitter.svg' />
+					<img class="google" id="single-social" src='{{ site.theme.link }}/assets/icons/google.svg' />
+					<img class="link" id="single-social" src='{{ site.theme.link }}/assets/icons/link.svg' />
+				</div>
+				<img class="share-separator" src='{{ site.theme.link }}/assets/images/separator.svg' />
+		    </section>
+
+			<section class='section-posts'>
+			<h3 class="standard-h3">Nos derniers articles</h3>
+			{% for article in last_articles %}
+				{% include 'partials/tease-post.twig' with { post: article} %}
+			{% endfor %}
 			</section>
 
 			<!-- comment box -->
@@ -20,7 +38,7 @@
 				<!-- comments -->
 				<div class="comments">
 				    {% if post.comments %}
-					<h3> comments </h3>
+					<h3 class="standard-h3">{{ post.comment_count }} Commentaires</h3>
 					{% for cmt in post.comments %}
 					    {% include "comment.twig" with {comment:cmt} %}
 					{% endfor %}
@@ -35,5 +53,6 @@
 				{% endif %}
 			</section>
 		</article>
+
 	</div><!-- /content-wrapper -->
 {% endblock %}

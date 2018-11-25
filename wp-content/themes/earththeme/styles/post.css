@@ -94,7 +94,7 @@
 
 .tease-post__text-content {
   position: relative;
-  height: calc(100% - 300px);
+  height: calc(100% - 400px);
   padding: 16px;
 }
 
@@ -110,7 +110,52 @@
 }
 
 .tease-post__infos {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
+  margin-top: 16px;
+  /* position: absolute;
+  left: 16px; */
+} 
+
+/*************************
+
+        SINGLE POST
+
+*************************/
+
+.blog-author
+{
+  margin-top: 15px;
+  color: #6B6B6B;
 }
+
+.article-body
+{ 
+  margin-top: 20px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+blockquote {
+  width: 700px;
+  padding-left: 20px;
+  color: #6B6B6B;
+  font-style: italic;
+  font-size: 19px;
+  border-left: 7px solid #08ceae;
+} 
+
+.share
+{
+  margin-top: 50px;
+}
+
+.social
+{
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#single-social
+{
+  margin-right: 30px;
+}
+

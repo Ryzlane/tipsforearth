@@ -40,7 +40,7 @@
 		<!-- comments -->
 			<div class="comments">
 				{% if tips.comments %}
-				<h3 class='standard-h3'>2 commentaires </h3>
+				<h3 class='standard-h3'>{{ post.comment_count }} Commentaires </h3>
 				{% for cmt in tips.comments %}
 					{% include "comment.twig" with { comment: cmt } %}
 				{% endfor %}
