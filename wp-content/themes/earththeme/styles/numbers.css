@@ -4,6 +4,10 @@
 
 ********************/
 
+.numbers {
+  padding-top: 50px;
+}
+
 .numbersSection
 {
   display: flex;

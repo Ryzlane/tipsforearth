@@ -9,12 +9,9 @@ body {
 }
 
 .standard-section--green-background {
-  width: calc(100% + (176px *  2));
-  height: 22%;
-  position: absolute;
-  background: #00CDAC;
-  margin-left: -176px;
+  width: 100%;
   margin-top: -66px;
+  background: #00CDAC;
 }
 
 .standard-h1 {
