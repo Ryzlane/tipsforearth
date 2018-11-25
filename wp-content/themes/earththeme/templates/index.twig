@@ -1,31 +1,28 @@
 {% extends "base.twig" %}
 
 {% block header %}
+	<section class="main-header">
+				{% include 'partials/hero-section.twig' %}
+	</section>
+	<div class='standard-section--green-background'>
+		<div class='standard-section'>
+			<section class='last-tips'>
+				{% include 'partials/tease-tips.twig' with { tips: last_tips} %}
+			</section>
 
-<section class="main-header">
-	<img src='{{ site.theme.link }}/assets/images/headerbg.jpg' alt='main image' style="width:100%;">
-</section>
+			<section class='numbers'>
+				<h3 class='TitreNombre'>Quelques Chiffres </h3>
+				<section class="numbersSection">
+				{% for nbr in last_numbers %}
+					{% include 'partials/single-number.twig' with { number: nbr} %}
+				{% endfor %}
+				</section>
+			</section>
+		</div>
+	</div>
 {% endblock %}
 
 {% block content %}
-
-	<section class='hero-section'>
-		{% include 'partials/hero-section.twig' %}
-	</section>
-
-	<section class='last-tips'>
-		{% include 'partials/tease-tips.twig' with { tips: last_tips} %}
-	</section>
-
-	<section class='numbers'>
-		<h3 class='TitreNombre'>Quelques Chiffres </h3>
-		<section class="numbersSection">
-		{% for nbr in last_numbers %}
-			{% include 'partials/single-number.twig' with { number: nbr} %}
-		{% endfor %}
-		</section>
-	</section>
-
 	<h1 class='standard-h1'>Nos derniers articles</h1>
 	<section class='section-posts'>
 		{% for article in last_articles %}
