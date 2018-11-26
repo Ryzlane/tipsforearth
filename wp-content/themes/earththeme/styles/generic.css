@@ -5,6 +5,13 @@ body {
 
 .standard-section {
   margin: 66px 176px 0 176px;
+  position: relative;
+}
+
+.standard-section--green-background {
+  width: 100%;
+  margin-top: -66px;
+  background: #00CDAC;
 }
 
 .standard-h1 {

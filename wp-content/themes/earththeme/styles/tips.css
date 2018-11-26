@@ -4,6 +4,12 @@
 
 ********************/
 
+.last-tips {
+  position: absolute;
+  width: 100%;
+  top: -200px;
+}
+
 .tips__card {
   position: relative;
   display: flex;
@@ -87,11 +93,6 @@
   width: 18px;
   height: 18px;
   margin-right: 4px;
-}
-
-.numbers
-{
-  margin-top: 50px;
 }
 
 .participation

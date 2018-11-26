@@ -9,7 +9,6 @@
 	<section class="comment-box">
 		<!-- child comments -->
 		{% if post.comments %}
-			<h4>Réponses</h4>
 			<div class="comments">
 				{% for cmt in comment.children %}
 					{% include "comment.twig" with { comment: cmt } %}

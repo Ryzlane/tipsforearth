@@ -4,12 +4,8 @@
 
 ********************/
 
-.numbers
-{
-  background-color: #00CDAC;
-  padding: 0;
-  bottom: 0;
-
+.numbers {
+  padding-top: 50px;
 }
 
 .numbersSection
