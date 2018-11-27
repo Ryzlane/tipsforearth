@@ -93,7 +93,10 @@
 
 .tease-post__text-content {
   position: relative;
+<<<<<<< HEAD
   height: calc(100% - 400px);
+=======
+>>>>>>> a20491c7383fbe7d31b641a9027ce992a029cdac
   padding: 16px;
   height: 250px;
 }
