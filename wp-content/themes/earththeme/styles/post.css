@@ -93,10 +93,7 @@
 
 .tease-post__text-content {
   position: relative;
-<<<<<<< HEAD
   height: calc(100% - 400px);
-=======
->>>>>>> a20491c7383fbe7d31b641a9027ce992a029cdac
   padding: 16px;
   height: 250px;
 }
@@ -128,6 +125,12 @@
 {
   margin-top: 15px;
   color: #6B6B6B;
+  margin-bottom: 20px;
+}
+
+.single-post-img
+{
+  padding-top: 20px;
 }
 
 .article-body
@@ -157,7 +160,44 @@ blockquote {
 
 *************************/
 
+.container-last-post
+{
+  display: flex;
+  /* justify-content: flex-start; */
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 0 15px;
+}
+
 .tease-last-post
 {
-  /* margin-top: 100px; */
+  margin-top: 20px;
+  transition: 1s all;
 }
+
+.tease-last-post__img
+{
+  width: 100%;
+  max-height: 346px;
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.tease-last-post__text-content
+{
+  padding: 10px 6px;
+  transition: 1s all;
+}
+
+.tease-last-post__infos
+{
+  margin-top: 10px;
+}
+
+.tease-last-post:hover {
+  -webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.25);
+  box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.25);
+}
+
+

@@ -11,9 +11,10 @@
 
 $args_last_articles = array(
 	'post_type' => 'post',
-	'numberposts' => 4,
+	'numberposts' => 3,
 	'orderby' => 'post_date',
 	'order' => 'DESC',
+	'post__not_in' => array( $post->ID )
 );
 
 $context = Timber::get_context();
