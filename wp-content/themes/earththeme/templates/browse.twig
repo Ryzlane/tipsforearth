@@ -6,9 +6,9 @@
 		<div class='tab-terms-cards'>
 		{% for el in taxonomies %}
 				
-				<div class='term-card tease-post'>
+				<div class='tease-post term-card'>
 					<div class='tease-post__img'>
-					<img src='{{ el.image.url}}' />
+					<img src='{{ el.image.url}}' class='term-img' />
 						</div>
 						<h3 class='standard-h3 term-h3' > {{ el.title }} </h3>
 						<p class="tease-post__preview term-preview"> {{ el.description }} </p>
