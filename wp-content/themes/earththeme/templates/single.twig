@@ -10,6 +10,11 @@
 				<p class="blog-author">
 					<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&#124;</span> {{ post.date }}
 				</p>
+				{% if post.thumbnail.src %}
+					<img src='{{post.thumbnail.src}}'/>
+                {% else %}
+                    <img src='{{ site.theme.link }}/assets/images/singlepost-placeholder.jpg' alt='no image for this post'>
+                {% endif %}
 				<div class="article-body">
 					{{post.content}}
 				</div>
@@ -31,7 +36,7 @@
 			<h3 class="standard-h3">Nos derniers articles</h3>
 			<div class="tease-last-post">
 			{% for article in last_articles %}
-				{% include 'partials/tease-post.twig' with { post: article} %}
+				{% include 'partials/tease-last-post.twig' with { post: article} %}
 			{% endfor %}
 			</div>
 			</section>
