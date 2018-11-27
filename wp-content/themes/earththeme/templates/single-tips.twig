@@ -15,11 +15,15 @@
 				</div>
 				</a>
 				<div class='tips__card__text-container'>
+					<p class='tips__card__tags standard-p'>
+						{% for term in terms %}
+							{{ term[0].name}}
+						{% endfor %}
+					</p>
 					<p class="tips-description">{{tips.description_detaillee}}</p>
 				</div>
 			</div>
-	    </section>
-
+			</section>
 		<section class='numbers'>
 			<h3 class='standard-h3'>En quelques chiffres :</h3>
 			{% for nbr in last_numbers %}

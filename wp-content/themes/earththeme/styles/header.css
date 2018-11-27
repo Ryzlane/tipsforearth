@@ -29,6 +29,12 @@
   flex-grow: 1800;
 }
 
+.main-header img {
+  height: 100vh;
+  width:100%;
+  object-fit: cover;
+}
+
 
 
 /**************************/
@@ -163,11 +169,3 @@
   transition: ease-in-out;
   background-color: #EEE;
 }
-
-
-
-
-/**************************/
-/****** RESPONSIVE ********/
-/**************************/
-

@@ -7,14 +7,14 @@
 	<div class='standard-section--green-background'>
 		<div class='standard-section'>
 			<section class='last-tips'>
-				{% include 'partials/tease-tips.twig' with { tips: last_tips} %}
+				{% include 'partials/tease-tips.twig' with { tips: last_tips, terms: terms_of_last_tips } %}
 			</section>
 
 			<section class='numbers'>
 				<h3 class='TitreNombre'>Quelques Chiffres </h3>
 				<section class="numbersSection">
 				{% for nbr in last_numbers %}
-					{% include 'partials/single-number.twig' with { number: nbr} %}
+					{% include 'partials/single-number.twig' with { number: nbr } %}
 				{% endfor %}
 				</section>
 			</section>
@@ -26,7 +26,7 @@
 	<h1 class='standard-h1'>Nos derniers articles</h1>
 	<section class='section-posts'>
 		{% for article in last_articles %}
-			{% include 'partials/tease-post.twig' with { post: article} %}
+			{% include 'partials/tease-post.twig' with { post: article } %}
 		{% endfor %}
 	</section>
 	

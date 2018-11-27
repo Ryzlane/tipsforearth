@@ -17,6 +17,7 @@ $args_all_posts = array(
 $context = Timber::get_context();
 $context['featured_post'] = Timber::query_post( $args_last_post );
 $context['all_posts'] = Timber::get_posts( $args_all_posts );
+
 $templates = array( 'page-blog.twig' );
 
 Timber::render( $templates, $context );

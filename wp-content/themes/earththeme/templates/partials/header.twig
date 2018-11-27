@@ -1,6 +1,6 @@
 <header class="header">
     <div class="containerHeader">
-      <img src="{{site.theme.link}}/assets/images/LogoTFE.png" class="logo" />
+      <a href="{{site.url}}"><img src="{{site.theme.link}}/assets/images/LogoTFE.png" class="logo" /></a>
       <a href="{{site.url}}" class="websiteTitle"><strong>{{ site.title }}</strong></a>
       <nav class="mainMenu">
       {% if menu %}
@@ -22,7 +22,7 @@
             {% endif %}
           </div>
       </nav>
-      <button href="#" class="menuBlog" >
+      <button href="{{site.url}}/blog" class="menuBlog" >
         <img src="{{site.theme.link}}/assets/icons/feather.svg"/>
         BLOG
       </button>

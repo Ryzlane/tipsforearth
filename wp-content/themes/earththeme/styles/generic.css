@@ -8,6 +8,25 @@ body {
   position: relative;
 }
 
+@media (max-width: 1200px) {
+  .standard-section {
+    margin: 66px 100px 0 100px;
+  }
+}
+
+@media (max-width: 950px) {
+  .standard-section {
+    margin: 66px 75px 0 75px;
+  }
+}
+
+@media (max-width: 700px) {
+  .standard-section {
+    margin: 66px 50px 0 50px;
+  }
+}
+
+
 .standard-section--green-background {
   width: 100%;
   margin-top: -66px;
