@@ -13,7 +13,7 @@ function add_taxonomies() {
 
   register_taxonomy($taxonomy, $object_type, $taxonomy_args);
 
-  $taxonomy = 'type';
+  $taxonomy = 'types';
   $object_type = array('tips');
   $taxonomy_args = array(
     'label' => __( 'Types' ),

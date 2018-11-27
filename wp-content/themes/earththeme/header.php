@@ -14,6 +14,8 @@
 $GLOBALS['timberContext'] = Timber::get_context();
 ob_start();
 
+$context['lesbails'] = 'coucou';
+
 // SYNTAXE : wp_nav_menu( array $args = array() )
 $args=array(
     'theme_location' => 'header', // nom du slug

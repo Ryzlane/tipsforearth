@@ -1,7 +1,7 @@
 {% extends "base.twig" %}
 
 {% block content %}
-		<h1 class='standard-h1'>Les tips dans la catégorie {{ taxonomy.name }}</h1>
+		<h1 class='standard-h1'>Les tips dans la catégorie {{ term.taxonomy }}</h1>
 
 		{% for singleTips in tips %}
 			{% include 'partials/tease-tips.twig' with { tips: singleTips} %}
