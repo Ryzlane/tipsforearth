@@ -18,7 +18,7 @@
 
 .tease-featured-post__img {
   width: 100%;
-  max-height: 500px;
+  max-height: 600px;
   overflow: hidden;
   border-radius: 8px 8px 0 0;
 }
@@ -93,10 +93,7 @@
 
 .tease-post__text-content {
   position: relative;
-<<<<<<< HEAD
   height: calc(100% - 400px);
-=======
->>>>>>> 26c662ce19fa53c56478e18ca63dc7588a3d4bf7
   padding: 16px;
   height: 250px;
 }
@@ -137,8 +134,13 @@
   line-height: 22px;
 }
 
+.share-separator
+{
+  margin-top: 20px;
+}
+
 blockquote {
-  width: 700px;
+  /* width: 70%; */
   padding-left: 20px;
   color: #6B6B6B;
   font-style: italic;
@@ -146,19 +148,13 @@ blockquote {
   border-left: 7px solid #08ceae;
 } 
 
-.share
-{
-  margin-top: 50px;
-}
+/*************************
 
-.social
-{
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
+        TEASE LAST POST
 
-#single-social
-{
-  margin-right: 30px;
-}
+*************************/
 
+.tease-last-post
+{
+  /* margin-top: 100px; */
+}

@@ -13,9 +13,10 @@
 				<div class="article-body">
 					{{post.content}}
 				</div>
+				<img class="share-separator" src='{{ site.theme.link }}/assets/images/separator.svg' />
 			</section>
 
-			<section class="share">
+			{# <section class="share">
 				<img class="share-separator" src='{{ site.theme.link }}/assets/images/separator.svg' />
 				<div class="social">
 					<img class="facebook" id="single-social" src='{{ site.theme.link }}/assets/icons/facebook.svg' />
@@ -24,13 +25,15 @@
 					<img class="link" id="single-social" src='{{ site.theme.link }}/assets/icons/link.svg' />
 				</div>
 				<img class="share-separator" src='{{ site.theme.link }}/assets/images/separator.svg' />
-		    </section>
+		    </section> #}
 
 			<section class='section-posts'>
 			<h3 class="standard-h3">Nos derniers articles</h3>
+			<div class="tease-last-post">
 			{% for article in last_articles %}
 				{% include 'partials/tease-post.twig' with { post: article} %}
 			{% endfor %}
+			</div>
 			</section>
 
 			<!-- comment box -->
@@ -38,7 +41,7 @@
 				<!-- comments -->
 				<div class="comments">
 				    {% if post.comments %}
-					<h3 class="standard-h3">{{ post.comment_count }} Commentaires</h3>
+					<h3 class="standard-h3">{{ post.comment_count }} commentaire(s)</h3>
 					{% for cmt in post.comments %}
 					    {% include "comment.twig" with {comment:cmt} %}
 					{% endfor %}
