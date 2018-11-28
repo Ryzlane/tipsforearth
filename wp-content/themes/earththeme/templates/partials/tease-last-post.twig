@@ -1,15 +1,14 @@
 {% extends 'partials/tease.twig' %}
 
 {% block content %}
-<div class="container-last-post">
 	<div class='tease-last-post'>
 		<a href="{{post.link}}">
 			<div class='tease-last-post__img'>
 				{% if post.thumbnail.src %}
 					<img src='{{post.thumbnail.src}}' />
-                {% else %}
-                    <img src='{{ site.theme.link }}/assets/images/lastpost-placeholder.png' alt='no image for this post'>
-                {% endif %}
+				{% else %}
+					<img src='{{ site.theme.link }}/assets/images/post-placeholder.png' alt='no image for this post'>
+				{% endif %}
 			</div>
 		</a>
 		<div class='tease-last-post__text-content'>
@@ -17,5 +16,4 @@
 			<p class='tease-last-post__infos standard-p-secondary'>{{ post.date('d/m/Y') }} | {{ post.comment_count }} commentaire(s)</p>
 		</div>
 	</div>
-<sdiv>
 {% endblock %}

@@ -10,31 +10,14 @@
 				<p class="blog-author">
 					<span>By</span><a href="{{post.author.path}}"> {{ post.author.name }} </a><span>&#124;</span> {{ post.date }}
 				</p>
-				{% if post.thumbnail.src %}
-					<img src='{{post.thumbnail.src}}'/>
-                {% else %}
-                    <img src='{{ site.theme.link }}/assets/images/singlepost-placeholder.jpg' alt='no image for this post'>
-                {% endif %}
 				<div class="article-body">
 					{{post.content}}
 				</div>
 				<img class="share-separator" src='{{ site.theme.link }}/assets/images/separator.svg' />
 			</section>
-
-			{# <section class="share">
-				<img class="share-separator" src='{{ site.theme.link }}/assets/images/separator.svg' />
-				<div class="social">
-					<img class="facebook" id="single-social" src='{{ site.theme.link }}/assets/icons/facebook.svg' />
-					<img class="twitter" id="single-social" src='{{ site.theme.link }}/assets/icons/twitter.svg' />
-					<img class="google" id="single-social" src='{{ site.theme.link }}/assets/icons/google.svg' />
-					<img class="link" id="single-social" src='{{ site.theme.link }}/assets/icons/link.svg' />
-				</div>
-				<img class="share-separator" src='{{ site.theme.link }}/assets/images/separator.svg' />
-		    </section> #}
-
-			<section class='section-posts'>
+			<section>
 			<h3 class="standard-h3">Nos derniers articles</h3>
-			<div class="tease-last-post">
+			<div class="section-posts">
 			{% for article in last_articles %}
 				{% include 'partials/tease-last-post.twig' with { post: article} %}
 			{% endfor %}
