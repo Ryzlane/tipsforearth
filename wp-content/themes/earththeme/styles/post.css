@@ -178,12 +178,20 @@ blockquote {
 
 .tease-last-post
 {
+  position: relative;
   width: 250px;
   height: 250px;
   transition: 1s all;
 }
 
+.tease-last-post a {
+  width: 100%;
+  height: 150px;
+}
+
 .tease-last-post:hover {
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
   -webkit-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.25);
   -moz-box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.25);
   box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.25);
@@ -195,21 +203,24 @@ blockquote {
   height: 150px;
   overflow: hidden;
   border-radius: 8px 8px 0 0;
+  display: flex;
 }
 
 .tease-last-post__img img {
+  align-self: center;
   width: 100%;
 }
 
 .tease-last-post__text-content
 {
+  
   padding: 10px 6px;
   transition: 1s all;
 }
 
 .tease-last-post__infos
 {
-  margin-top: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 6px;
 }
-
-
