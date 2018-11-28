@@ -98,7 +98,6 @@
   right: 24px;
   display: flex;
   justify-content: space-between;
-  width: 100px;
 }
 
 .tips__card__stats__block {
@@ -112,25 +111,34 @@
   margin-right: 4px;
 }
 
-.participation
-{
-  margin-top: 50px;
-  text-align: center;
-}
-
-.participation-btn
-{
-  margin-top: 50px;
-  width: 180px;
-  height: 50px;
-  background: linear-gradient(to right, #00CDAC, #8DDAD5);
-  border-radius: 25px;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.tips-description
-{
+.tips-description {
   line-height: 23px;
+}
+
+
+.tips__numbers {
+  margin-top: 36px;
+}
+
+.tips__numbers__container {
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.tips__number {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tips__number__chiffre {
+  font-size: 42px;
+  color: #00CDAC;
+  font-weight: bold;
+}
+
+.tips__number__indication {
+  margin: 16px 0;
+  font-weight: bold;
 }

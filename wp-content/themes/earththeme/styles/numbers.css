@@ -53,10 +53,10 @@
   color: white; 
 }
 
-@media (max-width: 870px) {
-    .numbersSection {
-        height: 80%;
-        flex-wrap: wrap;
-        justify-content: center;
+
+
+@media (max-width: 650px) {
+    .numbers {
+        padding-top: 250px;
     }
   }
