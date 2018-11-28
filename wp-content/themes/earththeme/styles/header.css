@@ -29,14 +29,6 @@
   flex-grow: 1800;
 }
 
-.main-header img {
-  height: 100vh;
-  width:100%;
-  object-fit: cover;
-}
-
-
-
 /**************************/
 /********* MENU ***********/
 /**************************/
@@ -168,4 +160,43 @@
 {
   transition: ease-in-out;
   background-color: #EEE;
+}
+
+
+/******************
+    HERO HEADER
+******************/
+
+.main-header {
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 12%,rgba(0,0,0,0) 13%,rgba(0,0,0,0.65) 100%), url("./../assets/images/default-header.jpg");
+  height: 100vh;
+  width:100%;
+  background-position: center;
+  background-size: cover;
+}
+
+.main-header__content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 80%;
+  color: white;
+  font-weight: bold;
+}
+
+.main-header__our-mission {
+  font-size: 56px;
+  margin-bottom: 36px;
+}
+
+.main-header p {
+  line-height: 150%;
+}
+
+.main-header__buttons {
+  margin-top: 36px;
+  display: flex;
+  justify-content: space-around;
 }
