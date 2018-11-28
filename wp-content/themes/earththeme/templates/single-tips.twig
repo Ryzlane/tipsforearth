@@ -3,7 +3,6 @@
 {% block content %}
 	<div class="single-tips">
 		<h1 class='standard-h1'>{{tips.title}}</h1>
-	
 		<section class='single-tips'>
 			<div class='tips__card tips__card'>
 				<div class='tips__card__img'>
@@ -24,20 +23,32 @@
 				</div>
 			</div>
 			</section>
-		<section class='numbers'>
+		<section class='tips__numbers'>
 			<h3 class='standard-h3'>En quelques chiffres :</h3>
-			{% for nbr in last_numbers %}
-			{% include 'partials/single-number.twig' with { number: nbr} %}
-			{% endfor %}
+			<div class='tips__numbers__container'>
+				{% if tips.chiffres_0_nombre %}
+					<div class='tips__number'>
+						<div class='tips__number__chiffre'>{{tips.chiffres_0_nombre}}</div>
+						<div class='tips__number__indication'>{{tips.chiffres_0_indication}}</div>
+						<div class='tips__number__description'>{{tips.chiffres_0_description}}</div>
+					</div>
+				{% endif %}
+				{% if tips.chiffres_1_nombre %}
+					<div class='tips__number'>
+						<div class='tips__number__chiffre'>{{tips.chiffres_0_nombre}}</div>
+						<div class='tips__number__indication'>{{tips.chiffres_0_indication}}</div>
+						<div class='tips__number__description'>{{tips.chiffres_0_description}}</div>
+					</div>
+				{% endif %}
+				{% if tips.chiffres_2_nombre %}
+					<div class='tips__number'>
+						<div class='tips__number__chiffre'>{{tips.chiffres_0_nombre}}</div>
+						<div class='tips__number__indication'>{{tips.chiffres_0_indication}}</div>
+						<div class='tips__number__description'>{{tips.chiffres_0_description}}</div>
+					</div>
+				{% endif %}
+			</div>
 		</section>
-
-		<section class="participation">
-			<h1 class='standard-h1'>102 personnes ont déjà réalisé ce tip ! Et vous ?</h1>
-			<button href="#" class="participation-btn">Je l'ai fait !</button>
-		</section>
-
-
-
 		<!-- comment box --> 
 		<section class="comment-box">
 		
