@@ -1,31 +1,26 @@
 {% extends 'base.twig' %}
 
 {% block content %}
-	<section class='terms-cards'>
+	<section class='terms'>
 		<h1 class='standard-h1 term-h1'>Les différentes catégories :</h1>
-		<div class='tab-terms-cards'>
-			{% for el in taxonomies %}
-					
-				<div class='term-card'>
-						
-					<img src='{{ el.image.url}}' class='term-img' />
-							
-						<h3 class='standard-h3 term-h3' > {{ el.title }} </h3>
-						
-						<div class="term-block-p">	
+		<div class='terms__container'>
+			{% for term in terms %}
+				<div class='term'>
+					<div class='term__img'>
+        		{% if tips.thumbnail.src %}
+          		<img src='{{term.image.url}}' alt='term img'>
+       			 {% else %}
+          		<img src='{{ site.theme.link }}/assets/images/tips-placeholder.png' alt='no image for this tips'>
+        		{% endif %}
+					</div>
 
-							<p class="term-preview"> {{ el.description }} </p>
-								
-						</div>
-						
-
-						<div class="standard-button_position">	
-
-							<a href="#" class='standard-button'>Voir plus</a>
-								
-						</div>
-				</div>
-					
+					<div class='term__text-content'>
+						<h3 class='term__title standard-h3'><a href='#'>{{term.name}}</a></h3>
+						<p class='term__tips'>{{term.count}} tips dans cette catégorie</p>
+						<p class='term__description'>{{term.description}}</p>
+						<a class='term__button standard-button' href="{{term.link}}">Voir les tips</a>
+					</div>
+				</div>		
 			{% endfor %}
 		</div>
 	</section>
