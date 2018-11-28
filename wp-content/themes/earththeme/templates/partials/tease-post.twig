@@ -6,6 +6,8 @@
 			<div class='tease-post__img'>
 				{% if post.thumbnail.src %}
 					<img src='{{post.thumbnail.src}}' />
+					{% else %}
+					<img src='{{ site.theme.link }}/assets/images/last-post-placeholder.png' alt='no image for this post'>
 				{% endif %}
 			</div>
 		</a>
